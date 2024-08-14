@@ -1,4 +1,4 @@
-package com.pavelshelkovenko.cellularfilling.ui.theme
+package com.pavelshelkovenko.cellularfilling.presentation.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
@@ -7,8 +7,9 @@ import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 private val AppColorScheme = lightColorScheme(
-    primary = Primary,
-    onPrimary = OnPrimary,
+    primary = Purple,
+    onPrimary = White,
+    onSecondary = Color.Black,
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
@@ -26,17 +27,17 @@ fun CellularFillingTheme(
 ) {
     MaterialTheme(
         colorScheme = AppColorScheme,
-        typography = Typography,
+        typography = AppTypography,
         content = content
     )
 }
 
 @Composable
-fun TransparentSystemBars() {
+fun SystemBarColors() {
     val systemUiController = rememberSystemUiController()
     systemUiController.apply {
         setSystemBarsColor(
-            color = SystemColor
+            color = Purple
         )
         setNavigationBarColor(
             color = Color.Transparent

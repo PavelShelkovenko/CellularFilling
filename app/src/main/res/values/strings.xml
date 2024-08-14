@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">CellularFilling</string>
-    <string name="cellular_filling">Клеточное наполнение</string>
+    <string name="header_title">Клеточное наполнение</string>
+    <string name="create_button_title">Сотворить</string>
+    <string name="alive_title">Живая</string>
+    <string name="alive_description">и шевелится!</string>
+    <string name="dead_title">Мёртвая</string>
+    <string name="dead_description">или прикидывается</string>
+    <string name="life_title">Жизнь</string>
+    <string name="life_description">ку-ку!</string>
+    <string name="death_title">Смерть</string>
+    <string name="death_description">жалко...</string>
 </resources>
