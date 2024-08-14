@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CellularFilling</string>
+    <string name="cellular_filling">Клеточное наполнение</string>
 </resources>
