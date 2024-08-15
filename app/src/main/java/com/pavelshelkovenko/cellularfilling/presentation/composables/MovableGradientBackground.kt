@@ -10,14 +10,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawWithCache
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.pavelshelkovenko.cellularfilling.presentation.theme.DarkPurple
+import com.pavelshelkovenko.cellularfilling.presentation.utils.animatedGradientBackground
 
 @Composable
 fun MovableGradientBackground(modifier: Modifier = Modifier) {
@@ -46,23 +43,4 @@ fun MovableGradientBackground(modifier: Modifier = Modifier) {
     )
 }
 
-fun Modifier.animatedGradientBackground(
-    offset: Float,
-    colors: List<Color>
-): Modifier {
-    return this.drawWithCache {
-        val brushSize = 600f
-        val brush = Brush.linearGradient(
-            colors = colors,
-            start = Offset(offset, offset),
-            end = Offset(
-                offset + brushSize,
-                offset + brushSize
-            ),
-            tileMode = TileMode.Mirror
-        )
-        onDrawBehind {
-            drawRect(brush)
-        }
-    }
-}
+

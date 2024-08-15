@@ -23,6 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.pavelshelkovenko.cellularfilling.R
 import com.pavelshelkovenko.cellularfilling.presentation.model.CellTypeUi
 import com.pavelshelkovenko.cellularfilling.presentation.theme.CellularFillingTheme
 import com.pavelshelkovenko.cellularfilling.presentation.theme.White
@@ -51,7 +52,7 @@ fun CellCard(
             Image(
                 painter = painterResource(id = cellTypeUi.iconResId),
                 modifier = Modifier.size(21.dp),
-                contentDescription = null
+                contentDescription = stringResource(R.string.cell_type_icon)
             )
         }
         Spacer(modifier = modifier.width(16.dp))

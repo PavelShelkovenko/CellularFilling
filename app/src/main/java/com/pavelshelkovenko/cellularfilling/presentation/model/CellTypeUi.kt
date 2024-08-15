@@ -3,7 +3,6 @@ package com.pavelshelkovenko.cellularfilling.presentation.model
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Brush
 import com.pavelshelkovenko.cellularfilling.R
-import com.pavelshelkovenko.cellularfilling.domain.CellType
 import com.pavelshelkovenko.cellularfilling.presentation.theme.AliveCellColorBrush
 import com.pavelshelkovenko.cellularfilling.presentation.theme.DeadCellColorBrush
 import com.pavelshelkovenko.cellularfilling.presentation.theme.LifeCellColorBrush
@@ -33,12 +32,4 @@ enum class CellTypeUi(
         backgroundBrush = LifeCellColorBrush,
         iconResId = R.drawable.ic_life
     ),
-}
-
-
-fun CellType.mapToCellTypeUi(): CellTypeUi {
-    return when(this) {
-        CellType.ALIVE -> CellTypeUi.ALIVE
-        CellType.DEAD -> CellTypeUi.DEAD
-    }
 }
