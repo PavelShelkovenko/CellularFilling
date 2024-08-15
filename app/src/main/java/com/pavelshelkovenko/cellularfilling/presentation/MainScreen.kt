@@ -21,12 +21,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pavelshelkovenko.cellularfilling.R
 import com.pavelshelkovenko.cellularfilling.presentation.composables.CellCard
 import com.pavelshelkovenko.cellularfilling.presentation.composables.MovableGradientBackground
-
+import com.pavelshelkovenko.cellularfilling.presentation.theme.CellularFillingTheme
+import com.pavelshelkovenko.cellularfilling.presentation.utils.isScrolledToTheEnd
 
 @Composable
 fun MainScreen(
@@ -69,10 +71,8 @@ fun MainScreen(
             state = lazyListState,
             verticalArrangement = Arrangement.spacedBy(4.dp),
             contentPadding = PaddingValues(
-                start = 16.dp,
-                end = 16.dp,
-                top = 6.dp,
-                bottom = 5.dp
+                horizontal = 16.dp,
+                vertical = 6.dp,
             ),
             modifier = Modifier.fillMaxHeight(0.9f)
         ) {
@@ -86,7 +86,9 @@ fun MainScreen(
                 )
             }
         }
+
         Spacer(modifier = Modifier.weight(1f))
+
         Button(
             onClick = {
                 viewModel.onEvent(ScreenEvent.AddCell)
@@ -104,10 +106,15 @@ fun MainScreen(
     }
 }
 
-fun LazyListState.isScrolledToTheEnd(): Boolean {
-    val lastItem = layoutInfo.visibleItemsInfo.lastOrNull()
-    return lastItem == null || lastItem.size + lastItem.offset <= layoutInfo.viewportEndOffset
+@Preview
+@Composable
+fun PreviewMainScreen() {
+    CellularFillingTheme {
+        MainScreen(innerPadding = PaddingValues(16.dp))
+    }
 }
+
+
 
 
 

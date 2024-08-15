@@ -10,13 +10,6 @@ val DeadCellColorBrush = Brush.verticalGradient(
     )
 )
 
-val DeathCellColorBrush = Brush.verticalGradient(
-    colors = listOf(
-        Color(0xFF000000),
-        Color(0XFFB0FFB4)
-    )
-)
-
 val AliveCellColorBrush = Brush.verticalGradient(
     colors = listOf(
         Color(0xFFFFB800),

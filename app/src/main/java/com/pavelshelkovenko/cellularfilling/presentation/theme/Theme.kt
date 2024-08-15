@@ -16,6 +16,7 @@ private val AppColorScheme = lightColorScheme(
 fun CellularFillingTheme(
     content: @Composable () -> Unit
 ) {
+    SystemBarColors()
     MaterialTheme(
         colorScheme = AppColorScheme,
         typography = AppTypography,

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.pavelshelkovenko.cellularfilling.data.CellTypeGenerator
 import com.pavelshelkovenko.cellularfilling.presentation.model.CellItem
 import com.pavelshelkovenko.cellularfilling.presentation.model.CellTypeUi
-import com.pavelshelkovenko.cellularfilling.presentation.model.mapToCellTypeUi
+import com.pavelshelkovenko.cellularfilling.presentation.utils.mapToCellTypeUi
 import kotlinx.coroutines.flow.MutableStateFlow
 
 class CellularViewModel : ViewModel() {

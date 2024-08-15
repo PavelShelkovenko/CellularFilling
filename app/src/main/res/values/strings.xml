@@ -8,4 +8,5 @@
     <string name="dead_description">или прикидывается</string>
     <string name="life_title">Жизнь</string>
     <string name="life_description">ку-ку!</string>
+    <string name="cell_type_icon">Иконка для обозначения клетки</string>
 </resources>
