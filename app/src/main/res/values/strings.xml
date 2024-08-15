@@ -8,6 +8,4 @@
     <string name="dead_description">или прикидывается</string>
     <string name="life_title">Жизнь</string>
     <string name="life_description">ку-ку!</string>
-    <string name="death_title">Смерть</string>
-    <string name="death_description">жалко...</string>
 </resources>
