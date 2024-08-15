@@ -3,8 +3,6 @@ package com.pavelshelkovenko.cellularfilling.presentation
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -74,7 +72,7 @@ fun MainScreen(
                 horizontal = 16.dp,
                 vertical = 6.dp,
             ),
-            modifier = Modifier.fillMaxHeight(0.9f)
+            modifier = Modifier.weight(1f)
         ) {
             items(
                 items = state.value.cellsList,
@@ -86,8 +84,6 @@ fun MainScreen(
                 )
             }
         }
-
-        Spacer(modifier = Modifier.weight(1f))
 
         Button(
             onClick = {
